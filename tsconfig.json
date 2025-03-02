@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "ES6",
+      "dom"
+    ],
+    "jsx": "react-jsx",
+    "outDir": "lib",
+    "removeComments": true,
+    "target": "ES6",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@/src/*": ["./src/*"]
+    },
+    "sourceMap": true,
+    "sourceRoot": "/",
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "exclude": [
+    "node_modules/**/*"
+  ]
+}
