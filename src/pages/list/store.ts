@@ -8,9 +8,9 @@ export class UserListStore {
 	records: User[] = [];
 	userList: User[] = [];
 	modal: User | null = null;
-	isLoading: boolean = true;
+	isLoading: boolean = false;
 	error: Error | null = null;
-	filter: string | null = null;
+	filter: 'active' | 'inactive' | null = null;
 
 	constructor() {
 		makeAutoObservable(this);
@@ -49,7 +49,7 @@ export class UserListStore {
 	};
 
 	@action.bound
-	onChangeFilter(value: string) {
+	onChangeFilter(value: 'active' | 'inactive') {
 		this.filter = value;
 		this.doFilter();
 	}

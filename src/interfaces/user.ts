@@ -5,5 +5,5 @@ export interface User {
 	phone: string;
 	address: string;
 	date: Date;
-	status: string;
+	status: 'active' | 'inactive';
 }

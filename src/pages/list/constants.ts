@@ -35,3 +35,8 @@ export const COLUMNS: TableProps<User>['columns'] = [
 		render: (status: string) => (status === 'active' ? 'Активный' : 'Не активный'),
 	},
 ];
+
+export const FILTER_OPTIONS = [
+	{ value: 'active', label: 'Активный' },
+	{ value: 'inactive', label: 'Не активный' },
+];

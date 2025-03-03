@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import { useState } from 'react';
 import { Table, Modal, Select, Skeleton, Alert, Button, Card, Descriptions, Tag } from 'antd';
-import { COLUMNS } from './constants';
+import { COLUMNS, FILTER_OPTIONS } from './constants';
 import { UserListStore } from './store';
 import { User } from '@/src/interfaces/user';
 import moment from 'moment';
@@ -21,10 +21,7 @@ export const UserList: React.FC = observer(() => {
 					onChange={onChangeFilter}
 					allowClear
 					value={filter}
-					options={[
-						{ value: 'active', label: 'Активный' },
-						{ value: 'inactive', label: 'Не активный' },
-					]}
+					options={FILTER_OPTIONS}
 				/>
 			}
 		>
